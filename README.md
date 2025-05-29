@@ -9,3 +9,15 @@
 4. Axios 설치
 
 - `npm install axios`
+
+5. React Query, React Dev Mode 설치
+
+- `npm i @tanstack/react-query`
+
+6. React Router 설치
+
+- `npm i react-router`
+
+7. 기타 라이브러리 설치
+
+- `npm install -D @types/node`
