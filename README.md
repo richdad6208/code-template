@@ -29,3 +29,11 @@
 9. React Hook Form 설치
 
 - `npm install react-hook-form`
+
+10. Helmet 설치
+
+- `npm install react-helmet-async`
+
+11. zustand 설치
+
+- `npm install zustand`
