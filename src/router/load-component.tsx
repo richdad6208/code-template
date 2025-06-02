@@ -1,3 +1,5 @@
+import { RouteGuard } from '@/src/components/common/route-guard';
+import { Permission } from '@/src/utils/common/permission';
 import { lazy, Suspense, type ComponentType, type ReactNode } from 'react';
 
 /**
@@ -10,7 +12,7 @@ import { lazy, Suspense, type ComponentType, type ReactNode } from 'react';
 
 export interface LoadComponentProps {
     importComponent: () => Promise<{ default: ComponentType }>;
-    permissions?: string[] | null;
+    permissions?: string[];
     fallback?: ReactNode;
 }
 export const LoadComponent = ({ importComponent, fallback, permissions }: LoadComponentProps) => {
@@ -18,9 +20,9 @@ export const LoadComponent = ({ importComponent, fallback, permissions }: LoadCo
 
     const element = (
         <Suspense fallback={fallback ?? <div>Loading...</div>}>
-            {/* <RouteGuard permissions={permissions}> */}
-            <Component />
-            {/* </RouteGuard> */}
+            <RouteGuard permissions={permissions}>
+                <Component />
+            </RouteGuard>
         </Suspense>
     );
 

@@ -29,3 +29,7 @@
 9. React Hook Form 설치
 
 - `npm install react-hook-form`
+
+10. tailwind config 파일 설정
+
+- `npx tailwindcss init`

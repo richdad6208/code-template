@@ -5,7 +5,7 @@ import '@mantine/core/styles.css';
 export default function App() {
     return (
         <MantineProvider>
-            <main>
+            <main className="font-gothic">
                 <Outlet />
             </main>
         </MantineProvider>
