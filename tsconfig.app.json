@@ -21,7 +21,7 @@
         // 기본 내보내기 임포트 허용 여부
         "allowSyntheticDefaultImports": true,
         // 모듈 격리 여부
-        "isolatedModules": true,
+        "isolatedModules": false,
         // 모듈 감지 방법
         "moduleDetection": "force",
         // 파일 출력 여부
@@ -46,39 +46,16 @@
         "baseUrl": "./",
         // 경로 별칭
         "paths": {
-            "@src": ["./src"],
-            "@src/*": ["./src/*"],
-            "@assets": ["./src/assets"],
-            "@assets/*": ["./src/assets/*"],
-            "@components": ["./src/components"],
-            "@components/*": ["./src/components/*"],
-            "@domain": ["./src/domain"],
-            "@domain/*": ["./src/domain/*"],
-            "@portal/*": ["./src/domain/portal/*"],
-            "@portal": ["./src/domain/portal"],
-            "@manager/*": ["./src/domain/manager/*"],
-            "@manager": ["./src/domain/manager"],
-            "@router": ["./src/router"],
-            "@router/*": ["./src/router/*"],
-            "@types": ["./src/types"],
-            "@types/*": ["./src/types/*"],
-            "@global": ["./src/global"],
-            "@global/*": ["./src/global/*"],
-            "@utils": ["./src/utils"],
-            "@utils/*": ["./src/utils/*"],
-            "@hooks": ["./src/hooks"],
-            "@hooks/*": ["./src/hooks/*"],
-            "@store": ["./src/store"],
-            "@store/*": ["./src/store/*"],
-            "@constance": ["./src/constance"],
-            "@constance/*": ["./src/constance/*"],
-            "@model/*": ["./src/model/*"],
-            "@model": ["./src/model"],
-            "@api": ["./src/api"],
-            "@api/*": ["./src/api/*"],
-            "@css": ["./src/css"]
+            "@/*": ["./*"]
         }
     },
     // 포함할 파일 및 디렉토리
-    "include": ["src", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.js", "src/**/*.jsx"]
+    "include": [
+        "src",
+        "src/**/*.ts",
+        "src/**/*.d.ts",
+        "src/**/*.tsx",
+        "src/**/*.js",
+        "src/**/*.jsx"
+    ]
 }

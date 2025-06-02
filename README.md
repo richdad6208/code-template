@@ -21,3 +21,11 @@
 7. 기타 라이브러리 설치
 
 - `npm install -D @types/node`
+
+8. Mantine 라이브러리 설치
+
+- `npm install @mantine/core @mantine/hooks`
+
+9. React Hook Form 설치
+
+- `npm install react-hook-form`

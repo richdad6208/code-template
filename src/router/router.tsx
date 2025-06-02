@@ -1,6 +1,6 @@
 import { createBrowserRouter, type RouteObject } from 'react-router';
 import { LoadComponent } from './load-component';
-import App from '@src/App';
+import App from '@/src/App';
 
 export const routes: RouteObject[] = [
     {
@@ -9,12 +9,18 @@ export const routes: RouteObject[] = [
         children: [
             {
                 path: '/',
-                lazy: async () => LoadComponent({ importComponent: () => import('@components/layout/portal-layout') }),
+                lazy: async () =>
+                    LoadComponent({
+                        importComponent: () => import('@/src/components/layout/portal-layout'),
+                    }),
                 children: [
                     {
                         path: '/',
                         index: true,
-                        lazy: async () => LoadComponent({ importComponent: () => import('@portal/main/main') }),
+                        lazy: async () =>
+                            LoadComponent({
+                                importComponent: () => import('@/src/domain/portal/main/main'),
+                            }),
                     },
                 ],
             },
