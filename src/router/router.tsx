@@ -1,6 +1,7 @@
 import { createBrowserRouter, type RouteObject } from 'react-router';
 import { LoadComponent } from './load-component';
 import App from '@/src/App';
+import { boardRoutes } from '@/src/router/board-routes';
 
 export const routes: RouteObject[] = [
     {
@@ -23,6 +24,14 @@ export const routes: RouteObject[] = [
                             }),
                     },
                 ],
+            },
+            {
+                path: '/board',
+                lazy: async () =>
+                    LoadComponent({
+                        importComponent: () => import('@/src/domain/board/main/main'),
+                    }),
+                children: [...boardRoutes],
             },
         ],
     },
