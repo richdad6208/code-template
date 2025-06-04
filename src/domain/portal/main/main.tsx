@@ -19,6 +19,12 @@ export default function Main() {
                 { name: 'id', label: 'id', valid: valid.must, req: true },
                 { name: 'email', label: 'password' },
                 { name: 'username', label: 'username' },
+                {
+                    type: 'select',
+                    name: 'class',
+                    label: 'class',
+                    values: [{ label: 'React', value: 'react' }],
+                },
             ],
         },
     ];

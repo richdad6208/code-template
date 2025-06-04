@@ -11,6 +11,7 @@ export interface InputProvider {
     inputClass?: string;
     inputType?: InputType;
     labelClass?: string;
+    values?: { label: string; value: string }[];
 }
 
-export type InputProviderType = 'text';
+export type InputProviderType = 'text' | 'select';

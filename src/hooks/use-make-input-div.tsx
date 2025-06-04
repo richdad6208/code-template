@@ -11,7 +11,7 @@ export default function useMakeForm({
     setError,
 }: FormProps) {
     const makeInputDiv = (formFields: FormFiled[]) => {
-        const baseInputClass = '!h-12';
+        const baseInputClass = '!h-12 ';
         const baseLabelClass = '!text-xl';
 
         return formFields.map((field: FormFiled, idx: number) => (
@@ -32,6 +32,7 @@ export default function useMakeForm({
                                 req={child.req}
                                 label={child.label}
                                 valid={child.valid}
+                                values={child.values}
                                 inputClass={`${baseInputClass}`}
                                 labelClass={`${baseLabelClass}`}
                                 errMsg={errors?.[child.name]?.message as string}
