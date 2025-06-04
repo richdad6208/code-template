@@ -22,7 +22,7 @@ export default function Main() {
                 {
                     type: 'select',
                     name: 'class',
-                    label: 'class',
+                    label: 'classsss',
                     values: [{ label: 'React', value: 'react' }],
                 },
             ],
