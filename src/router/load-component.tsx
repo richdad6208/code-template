@@ -1,5 +1,4 @@
 import { RouteGuard } from '@/src/components/common/route-guard';
-import { Permission } from '@/src/utils/common/permission';
 import { lazy, Suspense, type ComponentType, type ReactNode } from 'react';
 
 /**

@@ -37,3 +37,7 @@
 11. zustand 설치
 
 - `npm install zustand`
+
+12. vite-plugin-eslint 설치
+
+- `npm install -D vite-plugin-eslint`
