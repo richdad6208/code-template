@@ -15,9 +15,6 @@ jobs:
             - name: 🏗 Build Docker image
               run: docker build -t image-template:latest .
 
-            - name: Clean up unused Docker data
-              run: docker system prune -af --volumes
-
             - name: 🧼 Stop existing container
               run: |
                   docker stop container-template || true
@@ -25,3 +22,6 @@ jobs:
 
             - name: 🚀 Run new container
               run: docker run -d -p 3000:3000 --name container-template image-template:latest
+
+            - name: 🧹 Clean up unused Docker data
+              run: docker system prune -af --volumes
