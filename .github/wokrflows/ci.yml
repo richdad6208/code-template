@@ -1,0 +1,25 @@
+name: Build & Deploy Docker
+
+on:
+    push:
+        branches: [main, dev]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+    steps:
+        - name: 📦 Checkout repository
+          uses: actions/checkout@v3
+
+        - name: 🏗 Build Docker image
+          run: docker build -t image-template .
+
+        - name: 🧼 Stop and remove existing container
+          run: docker rm -f container-template || true
+
+        - name: 🧹 Clean up dangling images
+          run: docker image prune -f
+
+        - name: 🚀 Run new container
+          run: docker run -d -p 3000:3000 --name container-template image-template
