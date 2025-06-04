@@ -12,14 +12,14 @@ jobs:
             - name: 📦 Checkout repository
               uses: actions/checkout@v3
 
+            - name: 🧹 Clean up dangling images
+              run: docker image prune -f
+
             - name: 🏗 Build Docker image
-              run: docker build -t image-template .
+              run: docker build --no-cache -t image-template .
 
             - name: 🧼 Stop and remove existing container
               run: docker rm -f container-template || true
 
             - name: 🚀 Run new container
               run: docker run -d -p 3000:3000 --name container-template image-template
-
-            - name: 🧹 Clean up dangling images
-              run: docker image prune
